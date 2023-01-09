@@ -28,3 +28,4 @@ services:
       dockerfile: wordpress.dockerfile
     volumes:
       - ./wordpress:/var/www/html
+      - ./plugins:/var/www/html/wp-content/plugins
