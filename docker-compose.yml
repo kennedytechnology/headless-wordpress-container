@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: nginx.dockerfile
     depends_on:
-      - wordpress
+      - php
       - mysql
     ports:
       - 80:80
@@ -22,7 +22,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - ./mysql:/var/lib/mysql
-  wordpress:
+  php:
     build:
       context: .
       dockerfile: wordpress.dockerfile
