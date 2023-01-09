@@ -17,7 +17,7 @@ docker-compose up -d
 
 ## Wordpress setup
 
-Open browser and visit `http://localhost` or `https://localhost` (add the exeption if browser complains about ssl sertificate).
+Open browser and visit `http://localhost` or `https://localhost` (add the exeption if browser complains about ssl sertificate). SSL Certificate is generated using [mkcert](https://github.com/FiloSottile/mkcert)
 
 Use following for wordpress database setup
 
