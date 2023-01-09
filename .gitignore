@@ -1,5 +1,5 @@
-/mysql/*
-/wordpress/*
+/mysql/**
+/wordpress/**
 
 /plugins/akismet/
 /plugins/hello.php
