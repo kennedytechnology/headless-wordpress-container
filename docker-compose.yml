@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    depends_on:
+      - wordpress
+      - mysql
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./wordpress:/var/www/html
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mysql:/var/lib/mysql
+  wordpress:
+    build:
+      context: .
+      dockerfile: wordpress.dockerfile
+    volumes:
+      - ./wordpress:/var/www/html
